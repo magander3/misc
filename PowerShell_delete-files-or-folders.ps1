@@ -13,7 +13,7 @@ $dir1="D:\applixcation-1\logsfiles"
 $dir2="D:\applixcation-2\logsfiles"
 #
 # Define how old backups you want to remove by typing a number which corresponds to days
-$deletebackupsolderthan="7"
+$deletefilesolderthan="7"
 #
 # User input section end here - Do not change anything below this line
 # --------------------------------------------------------------------
