@@ -1,4 +1,4 @@
-# PowerShell Script to delete files and or folders in specific Windows Server folders.
+# PowerShell Script to delete files and or folders older than X days.
 # Created by: Magnus Andersson 
 # Version 1.0
 #
@@ -23,6 +23,6 @@ Remove-Item $logfile
 $d1=date
 echo "----------------------------------------" >> $logfile
 echo "Start deleting old backups at:" $d1 >> $logfile
-Get-ChildItem -Path "$dir1" -Recurse | Where CreationTime -lt  (Get-Date).AddDays(-$deletebackupsolderthan) | Remove-Item -Force -Recurse *>&1 >> $logfile
+Get-ChildItem -Path "$dir1" -Recurse | Where CreationTime -lt  (Get-Date).AddDays(-$deletefilesolderthan) | Remove-Item -Force -Recurse *>&1 >> $logfile
 $d2=date
 echo "Finished deleting old files and or folders at:" $d2 >> $logfile
